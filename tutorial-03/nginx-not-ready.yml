@@ -1,0 +1,25 @@
+# https://kubernetes.io/docs/concepts/workloads/pods/
+apiVersion: v1
+kind: Pod
+metadata:
+  name: "nginx-not-ready"
+  namespace: default
+  labels:
+    app: "nginx-not-ready"
+spec:
+  containers:
+    - name: nginx-not-ready
+      image: nginx:latest
+      livenessProbe:
+        httpGet:
+          path: /
+          port: 80
+        initialDelaySeconds: 3
+        periodSeconds: 3
+      readinessProbe:
+        httpGet:
+          path: /ready
+          port: 80
+        initialDelaySeconds: 3
+        periodSeconds: 3
+---

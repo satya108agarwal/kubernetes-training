@@ -1,0 +1,17 @@
+# https://kubernetes.io/docs/concepts/workloads/pods/
+apiVersion: v1
+kind: Pod
+metadata:
+  name: frontend
+  namespace: default
+  labels:
+    app: front-end
+spec:
+  containers:
+  - name: frontend
+    image: nginx:latest
+    ports:
+    - containerPort: 80
+      name: http
+  
+
