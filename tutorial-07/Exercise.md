@@ -1,16 +1,19 @@
-# Commands to create a NodePort Service
+# Exercises are provided here to help you become familiar with Kubernetes Node Port Service.
 
+
+#### Below command creates the NodePort Service
 ```bash
 kubectl create -f service.yml
+```
 
-# see the status of the service and deployment using the following command
+#### See the status of the service and deployment using the following command
+```bash
 kubectl get all
 ```
 
+#### launch the service 
 ```bash
-
-# launch the service 
 minikube service nginx-service
-
-# above command is tested on Mac, please find the equivalent in Windows to launch the service in browser.
 ```
+
+#### Above command is tested on Mac, please find the equivalent in Windows to launch the service in browser.

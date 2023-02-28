@@ -1,27 +1,28 @@
-# Commands to create a ReplicaSet
+# Exercises are provided here to help you become familiar with Kubernetes Replica Sets.
 
+#### Execute the below command to create a replica set
 ```bash
-# command to create a replica set
  kubectl create -f replicaset.yml
  ```
 
+#### Execute the below command to query replicasets
  ```bash
-# command to query replicasets
  kubectl get replicasets
  ```
 
-  ```bash
-# command to query pods created by the replicaset
-# check if 3 instances of pod exist
+
+#### Execute the below command to query pods created by the replicaset
+#### Verify the number of pods match to number of replica's mentioned in replica set
+```bash
  kubectl get pods
  ```
 
+#### Execute the below command to delete replicasets
    ```bash
-# command to delete replicaset
 kubectl delete replicaset frontend
  ```
 
-    ```bash
-# command to check if pods are deleted
-kubectl get po
+##### Execute the below command to check if pods are deleted
+```bash
+kubectl get pods
  ```

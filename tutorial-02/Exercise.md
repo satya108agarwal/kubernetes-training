@@ -1,49 +1,47 @@
-# Commands to create, describe and delete the pods
+# Exercises are provided here to help you become familiar with Kubernetes Pods.
 
+#### Execute below command to create a pod in the cluster
 ```bash
-# command to create a pod in the cluster
  kubectl create -f pod.yml
 ```
 
+#### Execute below command to list all pods 
 ```bash
-# command to list all pods 
 kubectl get pods
 ```
 
-
+#### Execute below command to describe a pod
 ```bash
-# command to describe a pod
 kubectl describe pod frontend
 ```
 
+#### Execute below command to see the IP of a pod
 ```bash
-# command to see the IP of a pod
 kubectl get pods -o wide
 ```
 
+#### Execute below command to delete the pod
 ```bash
-# command to delete the pod
 kubectl delete pod frontend
 ```
-
+#### Execute below command to check the logs of the workload
 ```bash
-# command to check the logs of the workload
 kubectl logs -f frontend
 ```
 
+#### Execute below command to ssh to the running container to check the contents of the workload or for any troubleshooting
 ```bash
-# command to login to the running container to check the contents of the workload
 kubectl exec -it frontend -- /bin/bash
 ```
 # Troubleshoot Pod Failures
 
+##### Execute below command to create a pod which has a image that doesn't exist in container registry.
 ```bash
-# command to create a pod which has a image that doesn't exist
  kubectl create -f failed_pod.yml
 ```
 
+##### Execute below command to check the errors
 ```bash
-# use describe command to check the errors
  kubectl describe pod imagedoesntexistpod
 ```
 
