@@ -3,7 +3,6 @@
 ```bash
 # command to create a pod in the cluster
  kubectl create -f pod.yml
-
 ```
 
 ```bash
@@ -46,6 +45,5 @@ kubectl exec -it frontend -- /bin/bash
 ```bash
 # use describe command to check the errors
  kubectl describe pod imagedoesntexistpod
-
 ```
 

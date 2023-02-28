@@ -1,4 +1,4 @@
-# Commands to create replicaset
+# Commands to create a ReplicaSet
 
 ```bash
 # command to create a replica set
