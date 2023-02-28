@@ -1,17 +1,18 @@
-# Commands to create a NodePort Service
+# Commands to create a ConfigMap
 
 ```bash
 kubectl create -f configmap.yml
 
 # ssh into the container and printenv all environment variables
-
 kubectl exec -it pod/pod-env-var -- /bin/sh
 
 ```
 
 ```bash
+# command to print all environment variables set from configmap
+printenv 
 
-printenv # command to print all environment variables set from configmap
+Output:
 
 keys=image.public.key=771
 rsa.public.key=42

@@ -3,7 +3,6 @@
 ```bash
 # command to start the minikube server
 minikube start 
-
 ```
 
 

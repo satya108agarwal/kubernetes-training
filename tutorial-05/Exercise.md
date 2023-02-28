@@ -1,9 +1,8 @@
-# Commands to create update and scale a deployment via yml file
+# Commands to create, update and scale a Deployment via yaml file
 
 ```bash
 # command to create a deployment
  kubectl create -f deployment.yml
-
 ```
 
 ```bash
@@ -37,7 +36,6 @@ kubectl set image deployment.v1.apps/nginx-deployment nginx=nginx:1.16.1
 # see in watch mode that updates happen in rolling recycle manner so there is no downtime to the end user
 
 watch kubectl get pods
-
 ```
 
 ```bash
@@ -45,6 +43,5 @@ kubectl edit deployment/nginx-deployment
 
 # set the image version to 1.15.1
 # see in watch mode that updates happen in rolling recycle manner so there is no downtime to the end user
-
 ```
 
